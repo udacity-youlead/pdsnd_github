@@ -34,7 +34,6 @@ def get_filters():
         else:
             break  
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
     while True:
         day = input("Please enter the weekday you would like to analyze data for, or type ALL to not specify: ").lower()
@@ -92,16 +91,14 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+
     popular_month = df['month'].mode()[0]
     print('Most popular month of travel:', popular_month)
 
-    # TO DO: display the most common day of week
     popular_weekday = df['day_of_week'].mode()[0]
     print('Most popular day of the week:', popular_weekday)   
 
 
-    # TO DO: display the most common start hour
 
     # extract hour from the Start Time column to create an hour column
     df['hour'] = df['Start Time'].dt.hour
