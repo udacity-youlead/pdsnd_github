@@ -93,7 +93,6 @@ def time_stats(df):
     popular_weekday = df['day_of_week'].mode()[0]
     print('Most popular day of the week:', popular_weekday)   
 
-
     # extract hour from the Start Time column to create an hour column
     df['hour'] = df['Start Time'].dt.hour
 
@@ -103,7 +102,6 @@ def time_stats(df):
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
 
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
@@ -166,12 +164,10 @@ def user_stats(df):
         print('Most recent year of birth:', int(recent_yob))
 
         common_yob = df['Birth Year'].mode()
-        print('Most common year of birth:', int(common_yob))
-    
-    
+        print('Most common year of birth:', int(common_yob)) 
+   
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
-
     
 def raw_data(df):    
     """Asks the user if raw data view is desired."""
@@ -201,7 +197,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
